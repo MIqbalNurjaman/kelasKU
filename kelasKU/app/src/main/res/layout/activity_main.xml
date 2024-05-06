@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg1"
+    tools:context=".MainActivity"
+    tools:ignore="HardcodedText">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <!--judul-->
+            <TextView
+                android:id="@+id/jdl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="160dp"
+                android:text="Registrasi anggota kelas"
+                android:layout_gravity="center_horizontal"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:fontFamily="cursive" />
+
+
+            <!--Email-->
+            <EditText
+                android:id="@+id/eml"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:ems="15"
+                android:hint="Masukan Email"
+                android:inputType="textEmailAddress"
+                android:textAlignment="center"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/black"
+                android:autofillHints="" />
+
+            <!--password-->
+            <EditText
+                android:id="@+id/pw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:ems="15"
+                android:hint="Masukan Password"
+                android:inputType="textPassword"
+                android:textAlignment="center"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/black"
+                android:autofillHints="" />
+
+
+            <!--Nama-->
+            <EditText
+                android:id="@+id/nm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:ems="15"
+                android:hint="Masukan Nama Lengkap"
+                android:inputType="textPersonName"
+                android:nextFocusDown="@id/jkl"
+                android:textAlignment="center"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/black"
+                android:autofillHints="" />
+
+            <!--Jenis Kelamin-->
+            <TextView
+                android:id="@+id/jkl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Jenis Kelamin"
+                android:textSize="18sp"
+                android:layout_gravity="center_horizontal"
+                />
+
+            <RadioGroup
+                android:id="@+id/rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Laki-laki" />
+
+                <RadioButton
+                    android:id="@+id/rb2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:text="Perempuan" />
+            </RadioGroup>
+
+            <!--ttl-->
+            <EditText
+                android:id="@+id/ttl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:ems="15"
+                android:focusable="false"
+                android:hint="Tanggal lahir"
+                android:inputType="text"
+                android:textAlignment="center"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/black"
+                android:autofillHints="" />
+
+            <!--Alamat-->
+            <EditText
+                android:id="@+id/alm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:ems="15"
+                android:hint="Masukan Alamat"
+                android:inputType="text"
+                android:textAlignment="center"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/black"
+                android:autofillHints="" />
+
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:onClick="Simpandata"
+                android:layout_gravity="center_horizontal"
+                android:text="Submit" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
